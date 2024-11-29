@@ -48,7 +48,14 @@ sudo systemctl restart apache2
 sudo apt install mysql-server
 #Menjalankan skrip untuk mengamankan instalasi MySQL
 sudo mysql_secure_installation
-
+#Buat Database
+mysql -u root -p
+CREATE DATABASE perpustakaan_db;
+#Buat User Database:
+CREATE USER 'nama_user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON [nama_database].* TO 'nama_user'@'localhost';
+#- Berikan Izin:
+FLUSH PRIVILEGES;
 ```
 
 ## Install  PHP
