@@ -24,6 +24,21 @@ sudo apt install apache2
 sudo systemctl enable apache2
 #Memulai layanan Apache2 secara manual 
 sudo systemctl start apache2
+# konfigurasi
+sudo nano /etc/apache2/sites-available/Perpustakaan.conf
+# konfigurasi seperti berikut
+<VirtualHost *:80>
+    ServerName Perpustakaan.com
+    DocumentRoot /var/www/Perpustakaan/public
+    <Directory /var/www/Perpustakaan/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+#aktifkan virtual host
+sudo a2ensite Perpustakaan.conf
+sudo systemctl restart apache2
 
 ```
 
