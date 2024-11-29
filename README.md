@@ -69,6 +69,8 @@ sudo systemctl restart apache2
 
 ```
 
+
+https://github.com/cahyohndsm/Sistem-Manajemen-Perpustakaan-Berbasis-Web/blob/main/nginx.png
 ## Install Nginx
 ```bash
 #digunakan untuk menginstal server web Nginx
