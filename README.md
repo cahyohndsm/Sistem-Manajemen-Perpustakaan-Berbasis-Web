@@ -56,12 +56,16 @@ CREATE USER 'nama_user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON [nama_database].* TO 'nama_user'@'localhost';
 #- Berikan Izin:
 FLUSH PRIVILEGES;
+
 ```
 
 ## Install  PHP
 ```bash
 #digunakan untuk menginstal beberapa komponen penting yang diperlukan untuk menjalankan aplikasi web berbasis PHP di server Apache
 sudo apt install php libapache2-mod-php php-mysql
+#Aktifkan Modul PHP:
+sudo a2enmod php
+sudo systemctl restart apache2
 
 ```
 
@@ -73,6 +77,20 @@ sudo apt install nginx
 sudo systemctl enable nginx
 #digunakan untuk memulai layanan Nginx secara manual
 sudo systemctl start nginx
+#Konfigurasi Nginx sebagai Reverse Proxy:
+sudo nano /etc/nginx/sites-available/[nama_virtual_host].conf
+#Isi file konfigurasi Nginx seperti berikut:
+server {
+    listen 80;
+    server_name [nama_domain_anda];
+
+    location / {
+        proxy_pass http://127.0.0.1:80;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
 
 ```
 
