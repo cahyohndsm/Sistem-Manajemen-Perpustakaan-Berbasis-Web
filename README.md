@@ -18,6 +18,9 @@
 - Nginx
 - Let's Encrypt
 
+## tujuan projct
+saya disini membuat project sistem management perpustakaan Project ini bertujuan untuk membangun sistem manajemen perpustakaan berbasis web yang dapat membantu pengelolaan koleksi buku, peminjaman, pengembalian, dan data anggota perpustakaan secara efisien. Sistem ini dirancang untuk mempermudah akses informasi dan proses administrasi perpustakaan, serta meningkatkan transparansi dan akuntabilitas.
+
 ## Operating System
 Ubuntu Server 20.04 
 https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
