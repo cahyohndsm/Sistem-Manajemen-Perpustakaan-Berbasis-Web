@@ -24,6 +24,7 @@ https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
 
 ## Install Apache web server
 ```bash
+#digunakan di sistem operasi berbasis Debian, seperti Ubuntu, untuk memperbarui daftar paket yang tersedia dan versi terbaru dari repositori perangkat lunak yang telah dikonfigurasi di sistem
 sudo apt update
 #Menginstal server web Apache2 
 sudo apt install apache2
