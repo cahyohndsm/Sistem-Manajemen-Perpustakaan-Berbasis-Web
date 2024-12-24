@@ -4,6 +4,13 @@
 - Nim : 23.83.0997
 - Judul : Sistem Manajemen Perpustakaan Berbasis Web
 
+## Spesifikasi Server
+- Sistem Operasi: Ubuntu Server 20.04 LTS
+- CPU: AMD Ryzen 5 3500U
+- RAM: 8 GB
+- Disk: SSD 256 GB
+
+
 ## Server
 - Apache Web Server
 - MySQL Database Server
